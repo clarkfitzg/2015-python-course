@@ -3,6 +3,39 @@ with emphasis on statistical applications. In the pilot year, it will be run
 as a workshop, and if successful, will be developed into a class for subsequent
 years.
 
+Outcomes
+---
+Students completing the class should understand the following concepts and be able to complete these tasks using Python. They are listed in terms of complexity.
+
+**Advantages of Python**
+Since Python is a popular, general purpose language it has many capabilities not shared by domain specific languages like R and Matlab. Python is more likely to be used in production systems. 
+
+**Read the docs**
+How to understand Python documentation, ie. what does `**kwargs` mean in a function definition. The benefits of official reviewed docs like [those found in Pandas](http://pandas.pydata.org/pandas-docs/stable/). This enables students to continue their self driven education.
+
+**Use appropriate high level libraries**
+Many modules provide similar functionality at different levels of abstraction. One example is [`requests`](http://docs.python-requests.org/en/latest/) compared to `urllib2` for HTTP. High level libraries should be chosen when possible for data analysis tasks.
+
+**Write functions and classes**
+Functions and classes are the basic building blocks used to build and organize code. Breaking data analysis tasks down through modular functions provides many benefits.
+
+**Using Pandas effectively**
++ Selecting and filtering rows / columns
++ Understand basic Numpy dtypes and ndarray
++ Missing data, `NAN` values
++ Load data in various formats including CSV, HTML, JSON, XML, HDF5
++ Write CSV
++ `dataframe.str` methods for string processing
+
+**Ipython Notebooks**
+Create Ipython notebooks containing the results of analysis. Graph and visualize data. Use LaTeX and Markdown for appropriate formatting. Export to HTML, and optionally to pdf using [pandoc](http://johnmacfarlane.net/pandoc/) and LaTeX.
+
+**Database joins**
+Join two different data sets on a common key using Pandas join and merge methods. Understand left, right, inner, and outer joins. This provides functionality comparable to relational databases.
+
+**Group by**
+Group data into logical chunks and apply arbitrary functions to those chunks. The pandas `groupby.apply` offers functionality similar to R's apply functions, and in particular resembles `ddply` from [`plyr`](http://plyr.had.co.nz/). This paradigm is also used in relational databases and map reduce.
+
 Target Audience
 ---
 3rd or 4th year undergraduates, master's students, and 1st or 2nd year PhD
@@ -46,36 +79,3 @@ Potential Topics
 + Test-driven development (`doctest`)
 + Object-oriented programming
 + Functional programming
-
-Outcomes
----
-Students completing the class should understand the following concepts and be able to complete these tasks using Python. They are listed in terms of complexity.
-
-**Advantages of Python**
-Since Python is a popular, general purpose language it has many capabilities not shared by domain specific languages like R and Matlab. Python is more likely to be used in production systems. 
-
-**Read the docs**
-How to understand Python documentation, ie. what does `**kwargs` mean in a function definition. The benefits of official reviewed docs like [those found in Pandas](http://pandas.pydata.org/pandas-docs/stable/). This enables students to continue their self driven education.
-
-**Use appropriate high level libraries**
-Many modules provide similar functionality at different levels of abstraction. One example is [`requests`](http://docs.python-requests.org/en/latest/) compared to `urllib2` for HTTP. High level libraries should be chosen when possible for data analysis tasks.
-
-**Write functions and classes**
-Functions and classes are the basic building blocks used to build and organize code. Breaking data analysis tasks down through modular functions provides many benefits.
-
-**Using Pandas effectively**
-+ Selecting and filtering rows / columns
-+ Understand basic Numpy dtypes and ndarray
-+ Missing data, `NAN` values
-+ Load data in various formats including CSV, HTML, JSON, XML, HDF5
-+ Write CSV
-+ `dataframe.str` methods for string processing
-
-**Ipython Notebooks**
-Create Ipython notebooks containing the results of analysis. Graph and visualize data. Use LaTeX and Markdown for appropriate formatting. Export to HTML, and optionally to pdf using [pandoc](http://johnmacfarlane.net/pandoc/) and LaTeX.
-
-**Database joins**
-Join two different data sets on a common key using Pandas join and merge methods. Understand left, right, inner, and outer joins. This provides functionality comparable to relational databases.
-
-**Group by**
-Group data into logical chunks and apply arbitrary functions to those chunks. The pandas `groupby.apply` offers functionality similar to R's apply functions, and in particular resembles `ddply` from [`plyr`](http://plyr.had.co.nz/). This paradigm is used in relational databases and map reduce also.
