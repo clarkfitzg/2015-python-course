@@ -49,11 +49,33 @@ Programming Environment
 Python 3, since it's starting to be widely adopted. We can recommend a basic
 text editor or the free PyCharm IDE (analogous to RStudio) for editing code.
 
-Text
+References
 ---
-There are many excellent, free books available for basic programming in Python.
-Most of the packages we'll cover are well-documented and provide examples.
-_Python for Data Analysis_ by Wes McKinney might also be a useful reference.
+The main reference text will be Wes McKinney's book
++ McKinney, W. (2012). _Python for Data Analysis: Data Wrangling with Pandas, 
+  NumPy, and IPython_. O'Reilly Media.
+
+There are also many free resources for learning to program in Python:
++ [Non-programmer's Tutorial for Python 3][Non]
++ [Beginner's Guide to Python][Beginner's Guide]
++ Swaroop, C. H. (2003). _[A Byte of Python][]_.
++ [Five Lifejackets to Throw to the New Coder][New Coder]
++ Pilgrim, M., & Willison, S. (2009). _[Dive Into Python 3][]_. Apress.
+
+Moreover, most of the packages we'll cover have excellent documentation:
++ [Python 3](https://docs.python.org/3/) (including the standard library)
++ [NumPy](http://docs.scipy.org/doc/numpy/)
++ [SciPy](http://docs.scipy.org/doc/scipy/reference/)
++ [matplotlib](http://matplotlib.org/contents.html)
++ [pandas](http://pandas.pydata.org/pandas-docs/stable/)
++ [IPython](http://ipython.org/documentation.html)
++ [scikit-learn](http://scikit-learn.org/stable/documentation.html)
+
+[A Byte of Python]: http://www.swaroopch.com/notes/python/
+[Dive Into Python 3]: http://www.diveintopython3.net/
+[Non]: http://en.wikibooks.org/wiki/Non-Programmer%27s_Tutorial_for_Python_3
+[Beginner's Guide]: https://wiki.python.org/moin/BeginnersGuide
+[New Coder]: http://newcoder.io/
 
 Core Topics
 ---
