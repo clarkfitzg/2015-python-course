@@ -54,12 +54,14 @@ References
 The main reference text will be Wes McKinney's book
 + McKinney, W. (2012). _Python for Data Analysis: Data Wrangling with Pandas, 
   NumPy, and IPython_. O'Reilly Media.
+
 There are also many free resources for learning to program in Python:
 + [Non-programmer's Tutorial for Python 3][Non]
 + [Beginner's Guide to Python][Beginner's Guide]
 + Swaroop, C. H. (2003). _[A Byte of Python][]_.
 + [Five Lifejackets to Throw to the New Coder][New Coder]
 + Pilgrim, M., & Willison, S. (2009). _[Dive Into Python 3][]_. Apress.
+
 Moreover, most of the packages we'll cover have excellent documentation:
 + [Python 3](https://docs.python.org/3/) (including the standard library)
 + [NumPy](http://docs.scipy.org/doc/numpy/)
