@@ -55,12 +55,20 @@ The main reference text will be Wes McKinney's book
 + McKinney, W. (2012). _Python for Data Analysis: Data Wrangling with Pandas, 
   NumPy, and IPython_. O'Reilly Media.
 
-There are also many free resources for learning to program in Python:
+General purpose text references include
++ Lutz, Mark. (2014). _Python Pocket Reference_. O'Reilly Media. 
++ Beazley, David. (2009). _Python Essential Reference_ . Addison-Wesley.
++ Pilgrim, M., & Willison, S. (2009). _[Dive Into Python 3][]_. Apress.
+
+There are also many free online resources for learning to program in Python:
 + [Non-programmer's Tutorial for Python 3][Non]
 + [Beginner's Guide to Python][Beginner's Guide]
 + Swaroop, C. H. (2003). _[A Byte of Python][]_.
 + [Five Lifejackets to Throw to the New Coder][New Coder]
-+ Pilgrim, M., & Willison, S. (2009). _[Dive Into Python 3][]_. Apress.
++ Reitz, Kenneth. [Hitchhiker's Guide to Python][Hitchhiker's Guide] Also available as a 
+ [PDF](https://media.readthedocs.org/pdf/python-guide/latest/python-guide.pdf)
++ [Pyvideo][Pyvideo] Recommended speakers include Guido Van Rossum, Raymond Hettinger,
+ Travis Oliphant, Fernando Perez, David Beazley, and Alex Martelli
 
 Moreover, most of the packages we'll cover have excellent documentation:
 + [Python 3](https://docs.python.org/3/) (including the standard library)
@@ -76,6 +84,8 @@ Moreover, most of the packages we'll cover have excellent documentation:
 [Non]: http://en.wikibooks.org/wiki/Non-Programmer%27s_Tutorial_for_Python_3
 [Beginner's Guide]: https://wiki.python.org/moin/BeginnersGuide
 [New Coder]: http://newcoder.io/
+[Hitchhiker's Guide]: http://docs.python-guide.org/en/latest/
+[Pyvideo]: http://pyvideo.org/
 
 Core Topics
 ---
