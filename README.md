@@ -7,8 +7,8 @@ Outcomes
 ---
 Students completing the class should understand the following concepts and be able to complete these tasks using Python. They are listed in terms of complexity.
 
-**Advantages of Python**
-Since Python is a popular, general purpose language it has many capabilities not shared by domain specific languages like R and Matlab. Python is more likely to be used in production systems. 
+**Uses of Python**
+Python is a widely used, general-purpose, high-level programming language. Source: [Wikipedia](http://en.wikipedia.org/wiki/Python_language)
 
 **Read the docs**
 How to understand Python documentation, ie. what does `**kwargs` mean in a function definition. The benefits of official reviewed docs like [those found in Pandas](http://pandas.pydata.org/pandas-docs/stable/). This enables students to continue their self driven education.
