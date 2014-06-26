@@ -1,14 +1,14 @@
 '''
 Scrape Davis housing data from Craigslist.
-
-Try running this script and then examining each of the
-four intermediate data structures.
 '''
 
+# Import modules from standard library first
 import csv
 
+# Third party libraries second
 import requests
 import bs4
+
 
 def extract(tag):
     '''
@@ -23,6 +23,7 @@ def extract(tag):
     except AttributeError:
         return ('', '', '')
 
+
 def to_csv(content, filename):
     '''
     Write extracted results to a CSV file.
@@ -36,11 +37,13 @@ def to_csv(content, filename):
         # Write in the main data
         writer.writerows(content)
 
+
 def main():
     '''
     Run the script.
     '''
-    # Use parentheses to expressions across multiple lines
+    # Use parentheses for strings spanning multiple lines
+    # Goal is to keep code less than 80 characters wide => easier to read
     davis_housing_url = ('http://sacramento.craigslist.org/search/'
                          'apa?query=davis&sale_date=-')
 
@@ -56,9 +59,10 @@ def main():
     # Apply the extract function to every element in ptags
     housing = map(extract, ptags)
 
+    # Finally write results to disk
     to_csv(housing, 'davis_housing.csv')
+
 
 # Statements inside this block will not run if the module is imported
 if __name__ == '__main__':
     main()
-
