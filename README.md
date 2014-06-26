@@ -1,76 +1,124 @@
-This class will provide an introduction to Python for scientific computing,
-with emphasis on statistical applications. In the pilot year, it will be run
-as a workshop, and if successful, will be developed into a class for subsequent
-years.
+# Python for Data Mining
+Messy data has an inconsistent or inconvenient format, 
+and may have missing values.
+Noisy data has measurement error.
+_Data mining extracts meaningful information from messy, noisy data._
+This is a multi-step process which includes gathering, cleaning, visualizing,
+modeling, and reporting.
 
-Outcomes
----
-Students completing the class should understand the following concepts and be able to complete these tasks using Python. They are listed in terms of complexity.
+This course provides an introduction to Python,
+with emphasis on data mining and other statistical applications.
+Students who finish the class should understand the following concepts (listed
+by complexity) and be able to complete relevant tasks using Python. 
 
-**Uses of Python**
-Python is a widely used, general-purpose, high-level programming language. Source: [Wikipedia](http://en.wikipedia.org/wiki/Python_language)
+**Uses of Python:**
+[Python](http://en.wikipedia.org/wiki/Python_language) is a high-level
+programming language in widespread use.
+Although it's a general-purpose language, it's important to recognize its
+strengths and weaknesses.
 
-**Read the docs**
-How to understand Python documentation, ie. what does `**kwargs` mean in a function definition. The benefits of official reviewed docs like [those found in Pandas](http://pandas.pydata.org/pandas-docs/stable/). This enables students to continue their self driven education.
+**Reading and Writing Docs:**
+Being able to read code documentation empowers students to educate themselves.
+This entails developing a new vocabulary, e.g., what `**kwargs` means in a
+function definition. 
 
-**Use appropriate high level libraries**
-Many modules provide similar functionality at different levels of abstraction. One example is [`requests`](http://docs.python-requests.org/en/latest/) compared to `urllib2` for HTTP. High level libraries should be chosen when possible for data analysis tasks.
+Writing code documentation is equally important, especially in collaborative
+projects.
+Consider the benefits of official docs like 
+[those found in Pandas](http://pandas.pydata.org/pandas-docs/stable/). 
 
-**Write functions and classes**
-Functions and classes are the basic building blocks used to build and organize code. Breaking data analysis tasks down through modular functions provides many benefits.
+**Reporting Results:**
+The results of data analysis should be presented in a clear, reproducible way.
+IPython notebooks make it easy to combine writing, visualizations, and code.
 
-**Using Pandas effectively**
-+ Selecting and filtering rows / columns
-+ Understand basic Numpy dtypes and ndarray
-+ Missing data, `NAN` values
-+ Load data in various formats including CSV, HTML, JSON, XML, HDF5
-+ Write CSV
-+ `dataframe.str` methods for string processing
++ Writing should be more than just a summary. Critical thinking is essential!
++ Graphs should be well-labelled, and convey information of interest without
+    clutter.
++ Use LaTeX or Markdown for appropriate formatting. 
+    Export to HTML, and optionally to PDF using 
+    [pandoc](http://johnmacfarlane.net/pandoc/) and LaTeX.
 
-**Ipython Notebooks**
-Create Ipython notebooks containing the results of analysis. Graph and visualize data. Use LaTeX and Markdown for appropriate formatting. Export to HTML, and optionally to pdf using [pandoc](http://johnmacfarlane.net/pandoc/) and LaTeX.
+**Code Organization:**
+Functions and classes are the basic building blocks used to build and organize
+code. 
+Breaking data analysis tasks into smaller steps makes code easier to read and 
+easier to write.
 
-**Database joins**
-Join two different data sets on a common key using Pandas join and merge methods. Understand left, right, inner, and outer joins. This provides functionality comparable to relational databases.
+**Database Queries:**
+Join two different data sets on a common key using join and merge methods. 
+Understand left, right, inner, and outer joins.
 
-**Group by**
-Group data into logical chunks and apply arbitrary functions to those chunks. The pandas `groupby.apply` offers functionality similar to R's apply functions, and in particular resembles `ddply` from [`plyr`](http://plyr.had.co.nz/). This paradigm is also used in relational databases and map reduce.
+**Numerical Computing:**
+Efficiency and numerical stability are essential to any algorithm.
+NumPy's n-dimensional arrays (ndarray) support fast vectorized operations.
+NumPy and SciPy provide much of the same functionality as R's built-in
+functions.
 
-Target Audience
----
+**Effective pandas Use:**
+The pandas module is a good foundation for most data analyses.
+
++ Select and filter rows / columns
++ Read various formats including CSV, HTML, JSON, XML, HDF5
++ Write CSVs
++ Handle missing data, or `NaN`s
++ Process strings, with methods such as `dataframe.str`
++ Use group-by operations, such as `groupby.apply`, which resembles R's apply
+  functions and `ddply` from [`plyr`](http://plyr.had.co.nz/)
+
+**Appropriate Abstraction:**
+Many libraries provide similar functionality at different levels of
+abstraction. One example is 
+[`requests`](http://docs.python-requests.org/en/latest/) 
+compared to `urllib2` for HTTP.
+High level libraries should be chosen when possible for data analysis tasks.
+
+## Target Audience
 3rd or 4th year undergraduates, master's students, and 1st or 2nd year PhD
 students. The students should have familiarity with programming, but not
 necessarily using Python. The intention is to avoid excessive overlap with STA
 141 and ECS 10 (basic programming via Python). Completion of one of these two
 courses could be recommended or a pre-requisite.
 
-Programming Environment
----
-Python 3, since it's starting to be widely adopted. We can recommend a basic
-text editor or the free PyCharm IDE (analogous to RStudio) for editing code.
+## Programming Environment
+We'll use Python 3, because it's starting replace Python 2.
+The [Anaconda][] distribution bundles most of the packages we'll use into one
+download.
+It also includes the [Spyder IDE][Spyder] (analogous to RStudio), 
+which features an inline IPython console.
+Basic text editors or the [PyCharm IDE][PyCharm] are good alternatives to
+Spyder for editing Python code.
 
-References
----
+[Anaconda]: http://continuum.io/downloads
+[Spyder]: https://code.google.com/p/spyderlib/
+[PyCharm]: https://www.jetbrains.com/pycharm/
+
+## References
 The main reference text will be Wes McKinney's book
+
 + McKinney, W. (2012). _Python for Data Analysis: Data Wrangling with Pandas, 
   NumPy, and IPython_. O'Reilly Media.
 
-General purpose text references include
-+ Lutz, Mark. (2014). _Python Pocket Reference_. O'Reilly Media. 
-+ Beazley, David. (2009). _Python Essential Reference_ . Addison-Wesley.
+General purpose references include
+
++ Lutz, M. (2014). _Python Pocket Reference_. O'Reilly Media. 
++ Beazley, D. (2009). _Python Essential Reference_. Addison-Wesley.
 + Pilgrim, M., & Willison, S. (2009). _[Dive Into Python 3][]_. Apress.
++ [StackOverflow][]. Please be conscious of the [rules][SO Rules]!
 
 There are also many free online resources for learning to program in Python:
+
 + [Non-programmer's Tutorial for Python 3][Non]
 + [Beginner's Guide to Python][Beginner's Guide]
 + Swaroop, C. H. (2003). _[A Byte of Python][]_.
++ Reitz, K. _[Hitchhiker's Guide to Python][Hitchhiker's Guide]_
+    ([PDF][Hitchhiker's PDF]).
 + [Five Lifejackets to Throw to the New Coder][New Coder]
-+ Reitz, Kenneth. [Hitchhiker's Guide to Python][Hitchhiker's Guide] Also available as a 
- [PDF](https://media.readthedocs.org/pdf/python-guide/latest/python-guide.pdf)
-+ [Pyvideo][Pyvideo] Recommended speakers include Guido Van Rossum, Raymond Hettinger,
- Travis Oliphant, Fernando Perez, David Beazley, and Alex Martelli
++ [Pyvideo][Pyvideo]. Recommended speakers include Guido Van Rossum,
+    Raymond Hettinger, Travis Oliphant, Fernando Perez, David Beazley, and
+    Alex Martelli.
 
 Moreover, most of the packages we'll cover have excellent documentation:
+
 + [Python 3](https://docs.python.org/3/) (including the standard library)
 + [NumPy](http://docs.scipy.org/doc/numpy/)
 + [SciPy](http://docs.scipy.org/doc/scipy/reference/)
@@ -86,9 +134,13 @@ Moreover, most of the packages we'll cover have excellent documentation:
 [New Coder]: http://newcoder.io/
 [Hitchhiker's Guide]: http://docs.python-guide.org/en/latest/
 [Pyvideo]: http://pyvideo.org/
+[Hitchhiker's PDF]: https://media.readthedocs.org/pdf/python-guide/latest/python-guide.pdf
+[StackOverflow]: http://stackoverflow.com/questions/tagged/python
+[SO Rules]: http://stackoverflow.com/tour
 
-Core Topics
----
+## Topics
+The core topics will be
+
 + Python Basics
     * syntax
     * tuples, lists, dicts (and possibly `collections`)
@@ -97,17 +149,19 @@ Core Topics
     * string manipulation
     * documenting code
 + Numerical computing (`numpy` and `scipy`)
-+ Plotting (`matplotlib` or `ggplot`)
-+ Statistical methods (`sk-learn`)
-+ Data manipulation (`pandas`)
-
-Potential Topics
----
 + IPython
-+ File I/O (`io` & `os.path`)
++ Plotting (`matplotlib` or `ggplot`)
++ Data manipulation (`pandas`)
++ Web-scraping (`requests` and `bs4`)
+
+Other topics we may cover include
+
++ File I/O (`io` and `os.path`)
 + Command-line argument parsing (`argparse`)
 + Debugging (`pdb`)
 + Profiling (`timeit` and `cProfile`)
 + Test-driven development (`doctest`)
 + Object-oriented programming
 + Functional programming
++ Statistical methods (`sklearn`)
++ Database queries
