@@ -33,16 +33,15 @@ IPython notebooks make it easy to combine writing, visualizations, and code.
 
 + Writing should be more than just a summary. Critical thinking is essential!
 + Graphs should be well-labelled, and convey information of interest without
-    clutter.
-+ Use LaTeX or Markdown for appropriate formatting. 
-    Export to HTML, and optionally to PDF using 
-    [pandoc](http://johnmacfarlane.net/pandoc/) and LaTeX.
+  clutter.
++ Use LaTeX or Markdown for appropriate formatting. Export to HTML, and
+  optionally to PDF using [pandoc](http://johnmacfarlane.net/pandoc/) and
+  LaTeX.
 
 **Code Organization:**
-Functions and classes are the basic building blocks used to build and organize
-code. 
-Breaking data analysis tasks into smaller steps makes code easier to read and 
-easier to write.
+Functions and classes are the basic building blocks used to organize code. 
+Breaking data analysis tasks into small, modular steps makes code easier to
+read, write, test, and reuse.
 
 **Database Queries:**
 Join two different data sets on a common key using join and merge methods. 
@@ -80,17 +79,31 @@ necessarily using Python. The intention is to avoid excessive overlap with STA
 courses could be recommended or a pre-requisite.
 
 ## Programming Environment
-We'll use Python 3, because it's starting replace Python 2.
-The [Anaconda][] distribution bundles most of the packages we'll use into one
-download.
-It also includes the [Spyder IDE][Spyder] (analogous to RStudio), 
-which features an inline IPython console.
-Basic text editors or the [PyCharm IDE][PyCharm] are good alternatives to
-Spyder for editing Python code.
+Python 3 has syntax changes and new features that break compatibility with
+Python 2.
+All of the major scientific computing libraries have added support for Python 3
+over the last few years, so it will be our focus.
+We recommend the [Anaconda][] Python 3 distribution,
+which bundles most packages we'll use into one download.
+Any other packages needed can be installed using `pip` or `conda`.
+
+Python code is supported by a vast array of editors.
+
++ [Spyder IDE][Spyder], included in Anaconda, 
+  is a Python equivalent of RStudio, 
+  designed with scientific computing in mind.
++ [PyCharm IDE][PyCharm] has very well-designed user interface. Chris uses
+  PyCharm.
++ General-purpose text editors, such as [Vim][] and [Emacs][], are a great
+  choice for ambitious students. They can be used with any language. 
+  See [here][Text Editors] for more details. Clark and Nick both use Vim.
 
 [Anaconda]: http://continuum.io/downloads
 [Spyder]: https://code.google.com/p/spyderlib/
 [PyCharm]: https://www.jetbrains.com/pycharm/
+[Vim]: http://www.vim.org/
+[Emacs]: https://www.gnu.org/software/emacs/
+[Text Editors]: http://heather.cs.ucdavis.edu/~matloff/ProgEdit/ProgEdit.html
 
 ## References
 The main reference text will be Wes McKinney's book
@@ -111,11 +124,11 @@ There are also many free online resources for learning to program in Python:
 + [Beginner's Guide to Python][Beginner's Guide]
 + Swaroop, C. H. (2003). _[A Byte of Python][]_.
 + Reitz, K. _[Hitchhiker's Guide to Python][Hitchhiker's Guide]_
-    ([PDF][Hitchhiker's PDF]).
+  ([PDF][Hitchhiker's PDF]).
 + [Five Lifejackets to Throw to the New Coder][New Coder]
 + [Pyvideo][Pyvideo]. Recommended speakers include Guido Van Rossum,
-    Raymond Hettinger, Travis Oliphant, Fernando Perez, David Beazley, and
-    Alex Martelli.
+  Raymond Hettinger, Travis Oliphant, Fernando Perez, David Beazley, and Alex
+  Martelli.
 
 Moreover, most of the packages we'll cover have excellent documentation:
 
