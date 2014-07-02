@@ -4,10 +4,25 @@ Scrape Davis housing data from Craigslist.
 
 # Import modules from standard library first
 import csv
+from urllib.robotparser import RobotFileParser
 
 # Third party libraries second
 import requests
 import bs4
+
+
+def check_robots(base_url, ext_url):
+    '''
+    Check the robots.txt
+    Prints note if base_url + ext_url is legal for crawling
+    '''
+    bot = RobotFileParser(base_url + '/robots.txt')
+    bot.read()
+    if bot.can_fetch('*', base_url + ext_url):
+        print('robots.txt permits parsing')
+    else:
+        print('Do not parse')
+    return bot
 
 
 def extract(tag):
@@ -42,13 +57,13 @@ def main():
     '''
     Run the script.
     '''
-    # Use parentheses for strings spanning multiple lines
-    # Goal is to keep code less than 80 characters wide => easier to read
-    davis_housing_url = ('http://sacramento.craigslist.org/search/'
-                         'apa?query=davis&sale_date=-')
+    craig_urls = ('http://sacramento.craigslist.org', '/apa/')
 
-    # Make the network call
-    craig_response = requests.get(davis_housing_url)
+    # Check the robots.txt using * for tuple unpacking
+    check_robots(*craig_urls)
+
+    # Send the HTTP GET request using the full URL
+    craig_response = requests.get(''.join(craig_urls))
 
     # Parse the response using BeautifulSoup
     craig_soup = bs4.BeautifulSoup(craig_response.content)
@@ -60,7 +75,7 @@ def main():
     housing = map(extract, ptags)
 
     # Finally write results to disk
-    to_csv(housing, 'davis_housing.csv')
+    to_csv(housing, 'sac_housing.csv')
 
 
 # Statements inside this block will not run if the module is imported
