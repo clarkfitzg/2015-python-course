@@ -6,16 +6,25 @@ using basic statistical concepts. Pay attention to what lazy evaluation
 does for the program's memory usage.
 
 In this simple card game each card has a value.
-A player draws 5 cards without replacement and sums their values
+A player draws several cards without replacement and sums their values
 to determine their final score.
 
 Task:
-Visualize the probability distribution for scores from this card game.
+Understand the probability distribution for scores from this card game.
+
+Approach 1: Convert directly to DataFrame
+
+    dist = pd.Series(list(allhands()))
+    dist.hist(bins=100)
+
+Approach 2: Reduce operation
+This has the advantage of being able to run an arbitrarily large data.
+For example, the line below produces and scores 750 million hands.
+
+    score_counts = collections.Counter(allhands(handsize=8))
 '''
 
 import itertools
-import collections
-from math import factorial
 
 
 suits = {'clubs', 'spades', 'hearts', 'diamonds'}
@@ -49,12 +58,17 @@ def allhands(handsize=5, random_variable=score):
     Returns an iterator that applies a random variable to each
     possible hand of size `handsize`.
 
-    >>> small = list(allhands(1))
-    >>> small[:4]
-    [4, 4, 4, 4]
+    >>> small = list(allhands(handsize=2))
+    >>> max(small)
+    100
     >>> len(small)
-    52
+    1326
+    >>> from scipy.misc import comb
+    >>> comb(N=52, k=2, exact=True)
+    1326
 
+    Use `scipy.misc.comb` to verify expectations.
+    Here 52 choose 2 hands are generated and scored.
     '''
     # The cartesian product of cards and suits produces a deck of cards.
     deck = itertools.product(cards.keys(), suits)
@@ -64,26 +78,6 @@ def allhands(handsize=5, random_variable=score):
 
     # Apply the random variable to every element in the sample space.
     return map(random_variable, sample_space)
-
-
-def n_choose_k(n, k):
-    '''
-    Naive calculation of n choose k combinations. Use this function
-    to verify expecations.
-
-    >>> n_choose_k(52, 5)
-    2598960
-
-    '''
-    return factorial(n) // (factorial(n - k) * factorial(k))
-
-
-# A couple things to try:
-#
-# score_counts = collections.Counter(allhands())
-#
-# dist = pd.Series(list(allhands()))
-# dist.hist(bins=100)
 
 
 if __name__ == '__main__':
