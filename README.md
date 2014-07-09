@@ -93,7 +93,7 @@ Python code is supported by a vast array of editors.
   is a Python equivalent of RStudio, 
   designed with scientific computing in mind.
 + [PyCharm IDE][PyCharm] has very well-designed user interface. Chris uses
-  PyCharm.
+  PyCharm with the IdeaVim Vi plugin.
 + General-purpose text editors, such as [Vim][] and [Emacs][], are a great
   choice for ambitious students. They can be used with any language. 
   See [here][Text Editors] for more details. Clark and Nick both use Vim.
