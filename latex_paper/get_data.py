@@ -1,5 +1,7 @@
 '''
 Generate random uniform numbers and save to file
+
+Replace this script with something more meaningful
 '''
 
 import random

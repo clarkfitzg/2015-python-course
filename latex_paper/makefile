@@ -7,3 +7,6 @@ figure.pdf : data.csv plot.R
 
 data.csv : get_data.py
 	python get_data.py
+
+clean :
+	rm *.Rout *.aux *.log
