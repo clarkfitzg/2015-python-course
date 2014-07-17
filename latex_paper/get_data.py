@@ -8,7 +8,7 @@ import random
 import csv
 
 
-random.seed()
+random.seed(37)
 
 data = ((i, random.random()) for i in range(10))
 
