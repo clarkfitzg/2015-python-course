@@ -42,7 +42,10 @@ with open('Makefile') as makefile:
 
 # Node labels
 
-print()
+print('\n')
+
+# Top level node
+print('paper_pdf [fontsize=24 shape=rect style=bold]')
 
 for node in nodeset:
     index = node.rfind('_')
