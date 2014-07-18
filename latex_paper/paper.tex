@@ -59,4 +59,9 @@ The line with {\tt figure.pdf} as the target has dependencies {\tt data.csv} and
 {\tt make} is great because it's lazy. Good programmers always look out for a chance to be lazy. That means that if you only change {\tt paper.tex}, then {\tt make} won't plot the figure or do anything with the python script.
 
 The final target is {\tt clean}. Issuing the command {\tt make clean} runs the line beginning with {\tt rm}, removing the byproducts of R and \LaTeX.
+
+Below is a visualization of the Makefile. It was automatically created using Python to generate the dot language, aka Graphviz.
+
+\centerline{\includegraphics{make_graph.pdf}}
+
 \end{document}
