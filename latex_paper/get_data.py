@@ -1,17 +1,20 @@
 '''
-Generate random uniform numbers and save to file
+Generate points on a polynomial
 
 Replace this script with something more meaningful
 '''
 
-import random
+import math
 import csv
 
 
-random.seed(37)
+def f(x):
+    return x ** 2 + 5 * x + math.pi
 
-data = ((i, random.random()) for i in range(10))
+
+data = [(x, f(x)) for x in range(-10, 10)]
 
 with open('data.csv', 'w') as f:
     pen = csv.writer(f)
+    pen.writerow(('x', 'y'))
     pen.writerows(data)

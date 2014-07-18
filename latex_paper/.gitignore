@@ -7,6 +7,3 @@
 
 # Not going to version control this data, although you sometimes may want to
 *.csv
-
-# The pdf output is a binary file and hence can't be version controlled
-*.pdf
