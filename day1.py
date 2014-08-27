@@ -1,10 +1,10 @@
 '''
 day1.py
 
-Instructor Notes 
+Instructor Notes
 
 These notes are meant to be a loose frame for the class period.
-Instructors should type these from the Ipython interpreter. 
+Instructors should type these from the Ipython interpreter.
 Students should be encouraged to follow along.
 Session should be highly interactive.
 
@@ -14,7 +14,7 @@ GENERAL THEME:
 SPECIFIC TOPICS:
     - basic syntax
     - data types
-    - containers 
+    - containers
     - looping
 '''
 
@@ -46,15 +46,21 @@ zeros = [0, 0.0, 'zero', False]
 # Compare comprehension to mathematical set syntax
 types = [type(x) for x in ones]
 
-# Try a few operators on different data types: +, -, ==
+# Try a few operators on different data types:
+# +, -, ==, <,
+
 # Error messages are meant to be informative.
 True == 1
+
+# These operators are calling magic methods
+2.__add__
 
 # TASK
 # Compute the difference between these two years
 pystarted = '1989'
 now = '2015'
 
+# TASK
 # Could show evolution of this to a more general function
 # start with return int(a) - int(b)
 def strdiff(a, b):
@@ -62,10 +68,10 @@ def strdiff(a, b):
     Converts a and b to numeric types returns the difference
 
     >>> strdiff('1989', '2000')
-    11.0
+    11
 
     '''
-    return abs(float(a) - float(b))
+    return abs(int(a) - int(b))
 
 
 ############################################################
@@ -101,13 +107,13 @@ hash(ones)
 
 # Composing these data structures is common.
 # But mind the Zen of Python - 'Flat is Better than Nested'
-pres_terms = {'obama': ('2015', '2009'), 
-             'bush': ('2009', '2001'),
-             'clinton': ('2001', '1993'),
-             }
+pres_terms = {'obama': ('2015', '2009'),
+              'bush': ('2009', '2001'),
+              'clinton': ('2001', '1993'),
+              }
 
-# Observe- a trailing comma as in the above `pres_terms` will raise a syntax error
-# in most languages, but not in Python. Why was this design chosen?
+# Observe- a trailing comma as in the above `pres_terms` will raise a syntax
+# error in most languages, but not in Python. Why was this design chosen?
 
 
 ############################################################
