@@ -15,4 +15,4 @@ make_graph.dot : make_graph.py Makefile
 	python make_graph.py > make_graph.dot
 
 clean :
-	rm *.Rout *.aux *.log
+	rm *.Rout *.aux *.log *.out
