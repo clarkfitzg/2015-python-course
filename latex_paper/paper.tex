@@ -1,0 +1,74 @@
+% A simple template for LaTeX documents
+
+\documentclass[11pt]{article}
+
+% Begin paragraphs with new line
+\usepackage{parskip}  
+
+% Change margin size
+\usepackage[margin=1in]{geometry}   
+
+% Graphics Example:  (PDF's make for good plots)
+% \includegraphics{filename}  % No file extension or quotes needed
+\usepackage{graphicx}               
+
+% Allows hyperlinks
+\usepackage{hyperref}
+
+% Blocks of code
+\usepackage{listings}
+\lstset{basicstyle=\ttfamily, title=\lstname}
+
+
+\begin{document}
+
+\section*{Makefiles}
+
+Originally designed for compiling large software projects, Makefiles can automate the dependencies between data analysis steps, enabling \textbf{reproducible research}.\footnote{For more on reproducible research, check out the chapter on Open Source Scientific Practice by K. Jarrod Millman and Fernando Perez available at \url{https://osf.io/h9gsd/}.}
+Taking a little time early on to precisely record and understand your steps in a Makefile will pay big dividends when it comes time to reproduce that analysis.
+
+To create this pdf, navigate to the directory containing the Makefile and type {\tt make}. Note that you will need \LaTeX, R, Graphviz, and Python installed for this example. The Makefile contains a list of dependencies and commands that act as a recipe for building the final product, in this case a pdf. Later, if you change any step in the analysis you can issue the {\tt make} command again and the make program will run the appropriate commands to refresh the results.
+
+Makefiles consist of rules that follow this pattern:
+
+\begin{lstlisting}
+target: dependencies
+[tab] system command
+\end{lstlisting}
+
+Note that it \textbf{must} have a tab character, spaces will not work. You may need to change your text editor settings. This is one of the only times that tab characters are a good idea when programming. The Makefile below generates this pdf.
+
+\vspace{0.3in}
+
+\lstinputlisting{Makefile}
+
+\vspace{0.3in}
+
+Below is a visualization of the Makefile. A Python script parsed the Makefile and created a file in the dot language. The dot language uses syntax like {\tt a -> b} to draw a line from a to b. It's as easy at it sounds. The magic happens when the dot file is dynamically generated from some underlying data, as in this case. Graphviz\footnote{\url{http://www.graphviz.org/}} takes the dot language as input and renders the structure in an aesthetically pleasing way.
+
+\centerline{\includegraphics{make_graph.pdf}}
+
+The first line describes our final target, {\tt paper.pdf}. It says that {\tt paper.pdf} depends on the \TeX\ source {\tt paper.tex}, {\tt figure.pdf}, {\tt make\_graph.pdf}, {\tt plot.R},  and {\tt Makefile}. If any of these files change then the corresponding command {\tt pdflatex paper.tex} will run, which makes a new {\tt paper.pdf}. It's a little strange that it directly depends on all these source files but the reason is that \LaTeX\ uses the {\tt listings} package to actually pull in the source code of {\tt Makefile} and {\tt plot.R} and render it in the pdf!
+
+The line with {\tt figure.pdf} as the target has dependencies {\tt data.csv} and {\tt plot.R}. If the data or the R script changes then {\tt make} needs to create a new figure.
+
+{\tt data.csv} is a target with dependency {\tt get\_data.py}. If the Python script that produces the data changes and we run {\tt make} again then the command {\tt python get\_data.py} will run, updating {\tt data.csv}. This will cause {\tt figure.pdf} to be plotted again, which will in turn cause the final pdf to be recreated.
+
+The final target is {\tt clean}. Issuing the command {\tt make clean} runs the line beginning with {\tt rm}, removing the byproducts of R and \LaTeX.
+
+{\tt make} is great because it's lazy. Good programmers always look out for a chance to be lazy. That means that if you only change {\tt paper.tex}, then {\tt make} won't plot the figure or do anything with the python script.This becomes important if any of the steps take a long time.
+
+\subsubsection*{R graphics}
+
+Below is an example of including graphics created by R. The source file below generates the corresponding plot.
+
+\lstinputlisting{plot.R}
+
+R saved this plot as a PDF. PDF's are vector graphics, which means that they'll look good no matter how much you zoom. Use them for professional results. Mathematical expressions are always beautiful in \LaTeX. 
+\[
+    f(x) = x^2 + 5x + \pi
+\]
+
+\centerline{\includegraphics{figure.pdf}}
+
+\end{document}

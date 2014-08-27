@@ -1,0 +1,9 @@
+# Ignore LaTeX byproducts
+*.aux
+*.log
+
+# Ignore R output
+*.Rout
+
+# Not going to version control this data, although you sometimes may want to
+*.csv
