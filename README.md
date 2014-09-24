@@ -1,51 +1,47 @@
 # Python for Data Mining
-Messy data has an inconsistent or inconvenient format, 
-and may have missing values.
+
+[Python][] is a programming language designed to have clear, concise, and
+expressive code.
+An extremely popular general-purpose language, Python has been used for tasks
+as diverse as web development, teaching, and systems administration.
+This workshop provides an introduction to Python for data mining.
+
+Messy data has an inconsistent or inconvenient format, and may have missing
+values.
 Noisy data has measurement error.
-_Data mining extracts meaningful information from messy, noisy data._
-This is a multi-step process which includes gathering, cleaning, visualizing,
-modeling, and reporting.
+*Data mining extracts meaningful information from messy, noisy data.*
+This is a start-to-finish process that includes gathering, cleaning,
+visualizing, modeling, and reporting.
 
-This course provides an introduction to Python,
-with emphasis on data mining and other statistical applications.
-Students who finish the class should understand the following concepts (listed
-by complexity) and be able to complete relevant tasks using Python. 
+Programming and research best practices are a secondary focus of the workshop,
+because [Python is a philosophy][zen] as well as a language.
+Core concepts include: writing organized, well-documented code; being a
+self-sufficient learner; using version control for code management and
+collaboration; ensuring reproducibility of results; producing concise,
+informative analyses and visualizations.
 
-**Uses of Python:**
-[Python](http://en.wikipedia.org/wiki/Python_language) is a high-level
-programming language in widespread use.
-Although it's a general-purpose language, it's important to recognize its
-strengths and weaknesses.
+The workshop will meet for four weeks during the Winter 2015 quarter at the
+University of California, Davis.
 
-**Reading and Writing Docs:**
-Being able to read code documentation empowers students to educate themselves.
-This entails developing a new vocabulary, e.g., what `**kwargs` means in a
-function definition. 
+[zen]: http://legacy.python.org/dev/peps/pep-0020/
+[Python]: https://www.python.org/
 
-Writing code documentation is equally important, especially in collaborative
-projects.
-Consider the benefits of official docs like 
-[those found in Pandas](http://pandas.pydata.org/pandas-docs/stable/). 
+## Target Audience
+The workshop is open to undergraduate and graduate students from all
+departments.
+We recommend that students have prior programming experience
+and a basic understanding of statistical methods,
+so they can follow along with the examples.
+For instance, completion of STA 108 and STA 141 is sufficient
+(but not required).
 
-**Reporting Results:**
-The results of data analysis should be presented in a clear, reproducible way.
-IPython notebooks make it easy to combine writing, visualizations, and code.
+The statistics department's Spring 2015 machine learning course, STA 208, will
+be language agnostic, so we encourage students who attend this workshop to
+practice their Python skills again in Spring!
 
-+ Writing should be more than just a summary. Critical thinking is essential!
-+ Graphs should be well-labelled, and convey information of interest without
-  clutter.
-+ Use LaTeX or Markdown for appropriate formatting. Export to HTML, and
-  optionally to PDF using [pandoc](http://johnmacfarlane.net/pandoc/) and
-  LaTeX.
+## Topics
 
-**Code Organization:**
-Functions and classes are the basic building blocks used to organize code. 
-Breaking data analysis tasks into small, modular steps makes code easier to
-read, write, test, and reuse.
-
-**Database Queries:**
-Join two different data sets on a common key using join and merge methods. 
-Understand left, right, inner, and outer joins.
+**Python Basics:**
 
 **Numerical Computing:**
 Efficiency and numerical stability are essential to any algorithm.
@@ -53,30 +49,19 @@ NumPy's n-dimensional arrays (ndarray) support fast vectorized operations.
 NumPy and SciPy provide much of the same functionality as R's built-in
 functions.
 
-**Effective pandas Use:**
-The pandas module is a good foundation for most data analyses.
+**Data Manipulation:**
+The pandas module duplicates many of the features (and some of the flaws) of
+R's data.frames. This module is especially useful for data manipulation
+such as:
 
-+ Select and filter rows / columns
-+ Read various formats including CSV, HTML, JSON, XML, HDF5
-+ Write CSVs
-+ Handle missing data, or `NaN`s
-+ Process strings, with methods such as `dataframe.str`
-+ Use group-by operations, such as `groupby.apply`, which resembles R's apply
-  functions and `ddply` from [`plyr`](http://plyr.had.co.nz/)
++ Filtering and restructuring data
++ Reading and writing CSVs
++ Handling missing values
++ Performing group-by operations, such as `groupby.apply`,
+  which resembles R's apply functions and `ddply` from 
+  [plyr](http://plyr.had.co.nz/)
 
-**Appropriate Abstraction:**
-Many libraries provide similar functionality at different levels of
-abstraction. One example is 
-[`requests`](http://docs.python-requests.org/en/latest/) 
-compared to `urllib2` for HTTP.
-High level libraries should be chosen when possible for data analysis tasks.
-
-## Target Audience
-3rd or 4th year undergraduates, master's students, and 1st or 2nd year PhD
-students. The students should have familiarity with programming, but not
-necessarily using Python. The intention is to avoid excessive overlap with STA
-141 and ECS 10 (basic programming via Python). Completion of one of these two
-courses could be recommended or a pre-requisite.
+**Data Visualization:**
 
 ## Programming Environment
 Python 3 has syntax changes and new features that break compatibility with
@@ -106,19 +91,32 @@ Python code is supported by a vast array of editors.
 [Text Editors]: http://heather.cs.ucdavis.edu/~matloff/ProgEdit/ProgEdit.html
 
 ## References
-The main reference text will be Wes McKinney's book
+
+Documentation for Python and various packages can be found at the following
+links:
+
++ [Python 3](https://docs.python.org/3/)
++ [NumPy](http://docs.scipy.org/doc/numpy/)
++ [SciPy](http://docs.scipy.org/doc/scipy/reference/)
++ [matplotlib](http://matplotlib.org/contents.html)
++ [pandas](http://pandas.pydata.org/pandas-docs/stable/)
++ [IPython](http://ipython.org/documentation.html)
++ [scikit-learn](http://scikit-learn.org/stable/documentation.html)
+
+Although it's not required for the workshop, we also encourage students to take
+a look at Wes McKinney's very relevant book:
 
 + McKinney, W. (2012). _Python for Data Analysis: Data Wrangling with Pandas, 
   NumPy, and IPython_. O'Reilly Media.
 
-General purpose references include
+General purpose references include:
 
 + Lutz, M. (2014). _Python Pocket Reference_. O'Reilly Media. 
 + Beazley, D. (2009). _Python Essential Reference_. Addison-Wesley.
 + Pilgrim, M., & Willison, S. (2009). _[Dive Into Python 3][]_. Apress.
 + [StackOverflow][]. Please be conscious of the [rules][SO Rules]!
 
-There are also many free online resources for learning to program in Python:
+Finally, there are many free resources for learning Python online:
 
 + [Non-programmer's Tutorial for Python 3][Non]
 + [Beginner's Guide to Python][Beginner's Guide]
@@ -130,15 +128,6 @@ There are also many free online resources for learning to program in Python:
   Raymond Hettinger, Travis Oliphant, Fernando Perez, David Beazley, and Alex
   Martelli.
 
-Moreover, most of the packages we'll cover have excellent documentation:
-
-+ [Python 3](https://docs.python.org/3/) (including the standard library)
-+ [NumPy](http://docs.scipy.org/doc/numpy/)
-+ [SciPy](http://docs.scipy.org/doc/scipy/reference/)
-+ [matplotlib](http://matplotlib.org/contents.html)
-+ [pandas](http://pandas.pydata.org/pandas-docs/stable/)
-+ [IPython](http://ipython.org/documentation.html)
-+ [scikit-learn](http://scikit-learn.org/stable/documentation.html)
 
 [A Byte of Python]: http://www.swaroopch.com/notes/python/
 [Dive Into Python 3]: http://www.diveintopython3.net/
@@ -151,30 +140,3 @@ Moreover, most of the packages we'll cover have excellent documentation:
 [StackOverflow]: http://stackoverflow.com/questions/tagged/python
 [SO Rules]: http://stackoverflow.com/tour
 
-## Topics
-The core topics will be
-
-+ Python Basics
-    * syntax
-    * tuples, lists, dicts (and possibly `collections`)
-    * list comprehensions
-    * iterators (and possibly generators)
-    * string manipulation
-    * documenting code
-+ Numerical computing (`numpy` and `scipy`)
-+ IPython
-+ Plotting (`matplotlib` or `ggplot`)
-+ Data manipulation (`pandas`)
-+ Web-scraping (`requests` and `bs4`)
-
-Other topics we may cover include
-
-+ File I/O (`io` and `os.path`)
-+ Command-line argument parsing (`argparse`)
-+ Debugging (`pdb`)
-+ Profiling (`timeit` and `cProfile`)
-+ Test-driven development (`doctest`)
-+ Object-oriented programming
-+ Functional programming
-+ Statistical methods (`sklearn`)
-+ Database queries
