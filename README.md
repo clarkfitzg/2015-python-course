@@ -41,32 +41,49 @@ practice their Python skills again in Spring!
 
 ## Topics
 
-**Python Basics:**
+### Core Python
+The workshop will kick off with a quick introduction to the syntax of Python,
+including operators, data types, control flow statements, function definition,
+and string manipulation.
+Slower, in-depth coverage will be given to uniquely Pythonic features such as
+built-in data structures, list comprehensions, iterators, and docstrings.
 
-**Numerical Computing:**
-Efficiency and numerical stability are essential to any algorithm.
-NumPy's n-dimensional arrays (ndarray) support fast vectorized operations.
-NumPy and SciPy provide much of the same functionality as R's built-in
-functions.
+Authoring packages and other advanced topics may also be discussed.
 
-**Data Manipulation:**
-The pandas module duplicates many of the features (and some of the flaws) of
-R's data.frames. This module is especially useful for data manipulation
-such as:
+### Scientific Computing
+Support for stable, high-performance vector operations is provided by the NumPy
+package.
+NumPy will be introduced early in the workshop and used often, because it's
+the foundation for most other scientific computing packages.
+The workshop will also cover SciPy, which extends NumPy with functions for
+linear algebra, optimization, and elementary statistics.
 
-+ Filtering and restructuring data
-+ Reading and writing CSVs
-+ Handling missing values
-+ Performing group-by operations, such as `groupby.apply`,
-  which resembles R's apply functions and `ddply` from 
-  [plyr](http://plyr.had.co.nz/)
+Packages specialized for machine learning and statistical modelling will be
+discussed during the final two weeks of the workshop.
 
-**Data Visualization:**
+### Data Manipulation
+The pandas package provides tabular data structures and convenience functions
+for manipulating them.
+This includes a two-dimensional data frame similar to the one found in R.
+Pandas will be covered extensively, because it makes it easy to
+
++ Read and write many formats (CSV, JSON, HDF, database)
++ Filter and restructure data
++ Handle missing values gracefully
++ Perform group-by operations (`apply` functions)
+
+### Data Visualization
+
+Many visualization packages are available for Python, but the workshop will
+focus on Seaborn, which is a user-friendly abstraction of the venerable 
+matplotlib package.
+
+Other packages such as ggplot2, Vincent, Bokeh, and mpld3 may also be covered.
 
 ## Programming Environment
 Python 3 has syntax changes and new features that break compatibility with
 Python 2.
-All of the major scientific computing libraries have added support for Python 3
+All of the major scientific computing packages have added support for Python 3
 over the last few years, so it will be our focus.
 We recommend the [Anaconda][] Python 3 distribution,
 which bundles most packages we'll use into one download.
@@ -92,51 +109,55 @@ Python code is supported by a vast array of editors.
 
 ## References
 
-Documentation for Python and various packages can be found at the following
-links:
-
-+ [Python 3](https://docs.python.org/3/)
-+ [NumPy](http://docs.scipy.org/doc/numpy/)
-+ [SciPy](http://docs.scipy.org/doc/scipy/reference/)
-+ [matplotlib](http://matplotlib.org/contents.html)
-+ [pandas](http://pandas.pydata.org/pandas-docs/stable/)
-+ [IPython](http://ipython.org/documentation.html)
-+ [scikit-learn](http://scikit-learn.org/stable/documentation.html)
-
-Although it's not required for the workshop, we also encourage students to take
-a look at Wes McKinney's very relevant book:
+No books are required for the workshop, but we recommend Wes McKinney's book:
 
 + McKinney, W. (2012). _Python for Data Analysis: Data Wrangling with Pandas, 
   NumPy, and IPython_. O'Reilly Media.
 
-General purpose references include:
+Python and most of the packages we'll use in the workshop have excellent
+documentation, which can be found at the following links.
 
++ [Python 3](https://docs.python.org/3/)
++ [NumPy](http://docs.scipy.org/doc/numpy/)
++ [SciPy](http://docs.scipy.org/doc/scipy/reference/)
++ [pandas](http://pandas.pydata.org/pandas-docs/stable/)
++ [matplotlib](http://matplotlib.org/contents.html)
++ [Seaborn](http://stanford.edu/~mwaskom/software/seaborn/tutorial.html)
++ [scikit-learn](http://scikit-learn.org/stable/documentation.html)
++ [IPython](http://ipython.org/documentation.html)
+
+Due to Python's popularity, a large number of general references are available.
+While these don't focus specifically on data analysis, they're helpful for
+learning the language and its idioms.
+Some of our favorites are listed below, many of which are free.
+
++ Swaroop, C. H. (2003). _[A Byte of Python][]_. ([PDF][ABoP PDF])
++ Reitz, K. _[Hitchhiker's Guide to Python][Hitchhiker's Guide]_. 
+  ([PDF][HGoP PDF])
 + Lutz, M. (2014). _Python Pocket Reference_. O'Reilly Media. 
 + Beazley, D. (2009). _Python Essential Reference_. Addison-Wesley.
 + Pilgrim, M., & Willison, S. (2009). _[Dive Into Python 3][]_. Apress.
-+ [StackOverflow][]. Please be conscious of the [rules][SO Rules]!
-
-Finally, there are many free resources for learning Python online:
-
 + [Non-programmer's Tutorial for Python 3][Non]
 + [Beginner's Guide to Python][Beginner's Guide]
-+ Swaroop, C. H. (2003). _[A Byte of Python][]_.
-+ Reitz, K. _[Hitchhiker's Guide to Python][Hitchhiker's Guide]_
-  ([PDF][Hitchhiker's PDF]).
 + [Five Lifejackets to Throw to the New Coder][New Coder]
-+ [Pyvideo][Pyvideo]. Recommended speakers include Guido Van Rossum,
-  Raymond Hettinger, Travis Oliphant, Fernando Perez, David Beazley, and Alex
-  Martelli.
++ [Pyvideo][Pyvideo]\*
++ [StackOverflow][]. Please be conscious of the [rules][SO Rules]!
+
+\* Videos featuring Guido Van Rossum, Raymond Hettinger, Travis Oliphant, 
+Fernando Perez, David Beazley, and Alex Martelli are suggested.
 
 
 [A Byte of Python]: http://www.swaroopch.com/notes/python/
+[ABoP PDF]: http://files.swaroopch.com/python/byte_of_python.pdf
+
+[Hitchhiker's Guide]: http://docs.python-guide.org/en/latest/
+[HGop PDF]: https://media.readthedocs.org/pdf/python-guide/latest/python-guide.pdf
+
 [Dive Into Python 3]: http://www.diveintopython3.net/
 [Non]: http://en.wikibooks.org/wiki/Non-Programmer%27s_Tutorial_for_Python_3
 [Beginner's Guide]: https://wiki.python.org/moin/BeginnersGuide
 [New Coder]: http://newcoder.io/
-[Hitchhiker's Guide]: http://docs.python-guide.org/en/latest/
 [Pyvideo]: http://pyvideo.org/
-[Hitchhiker's PDF]: https://media.readthedocs.org/pdf/python-guide/latest/python-guide.pdf
 [StackOverflow]: http://stackoverflow.com/questions/tagged/python
 [SO Rules]: http://stackoverflow.com/tour
 
