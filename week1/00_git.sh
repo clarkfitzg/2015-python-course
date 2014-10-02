@@ -17,6 +17,10 @@ man git init
 #     git init [NAME]
 git init git_demo
 
+# Alternatively, we can clone a repository from the web using:
+#     git clone URL
+git clone https://github.com/nick-ulle/2015-python-course.git
+
 # The new repository starts empty, as we can see with the command:
 #     git status
 cd git-demo
@@ -85,6 +89,10 @@ git push -u origin master
 #     git pull [LOCATION BRANCH]
 git pull origin master
 git pull
+
+# When working with a clone of someone else's GitHub repository, you can keep a
+# personal copy on GitHub by forking their repository. For example, you'll want
+# to fork this workshop's repository.
 
 # ----- Advanced Local Git -----
 # Git supports keeping multiple working versions of a repo at once. These are
