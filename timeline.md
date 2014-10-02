@@ -1,71 +1,36 @@
 Timeline
 ---
 
-**Week 1:** Help students get acquainted with Python and NumPy.
+**Week 1:** Basic Python Syntax
 
 + Day 1
+    Similiarities and differences with R
     + syllabus
+    + data types
     + IPython notebooks
     + arithmetic (dive straight into NumPy, but keep it simple!)
-    + printing/strings
+    + writing functions
     + control flow statements
     + data structures
     + comprehensions
 + Day 2
-    + writing functions
-    + generators (?)
+    + printing/strings
+    + iterators / generators
+    + object oriented programming intro
 
-**Week 2:** More Python and NumPy.
-
-Assign numerical computing project.
+**Week 2:** NumPy
 
 + Day 1
     + writing modules
     + writing classes
 + Day 2
 
-**Week 3:** Introduce pandas.
+**Week 3:** Pandas, Scipy
 
 + Day 1
 + Day 2
 
-**Week 4:** Introduce matplotlib and/or ggplot.
-
-Assign data analysis project, on clean data (CSV).
+**Week 4:** Matplotlib
 
 + Day 1
 + Day 2
-
-**Week 5:** Web-scraping with BeatifulSoup and others.
-
-+ Day 1
-    + basic HTML parsing
-+ Day 2
-
-**Week 6:**
-
-Assign web-scraping project.
-
-+ Day 1
-+ Day 2
-
-**Week 7:**
-
-+ Day 1
-+ Day 2
-
-**Week 8:** SQL (?)
-
-+ Day 1
-+ Day 2
-
-**Week 9:**
-
-+ Day 1
-+ Day 2
-
-**Week 10:**
-
-+ Day 1
-+ Day 2
-
