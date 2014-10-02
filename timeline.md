@@ -3,34 +3,33 @@ Timeline
 
 **Week 1:** Basic Python Syntax
 
-+ Day 1
-    Similiarities and differences with R
     + syllabus
-    + data types
+    + git
     + IPython notebooks
+    + Similiarities and differences with R
+    + data types
     + arithmetic (dive straight into NumPy, but keep it simple!)
     + writing functions
     + control flow statements
     + data structures
     + comprehensions
-+ Day 2
+
+**Week 2:** More Python Syntax
+
     + printing/strings
     + iterators / generators
     + object oriented programming intro
-
-**Week 2:** NumPy
-
-+ Day 1
-    + writing modules
     + writing classes
-+ Day 2
+    + importing scripts
+    + with statement
 
-**Week 3:** Pandas, Scipy
+**Week 3:** Pandas / Seaborn
 
-+ Day 1
-+ Day 2
+    + Pandas
+    + Seaborn
 
-**Week 4:** Matplotlib
-
-+ Day 1
-+ Day 2
+**Week 4:** Statistical Analysis / Scraping
+    
+    + machine learning (scikit-learn)
+    + modelling (statsmodels)
+    + web-scraping (lxml / requests)
